@@ -9,4 +9,5 @@
 ## Description
 
 ## Installation
+npm i express
 npm install -S express ejs
