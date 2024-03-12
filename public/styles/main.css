@@ -4,6 +4,7 @@
   --white-color: #fff;
   --mint-color: #CBF3F0;
   --dark-mint-color: #2EC4B6;
+  --gray-color: #737373;
 
   --main-font: "Kanit", sans-serif;
 }
@@ -17,9 +18,9 @@ main, footer {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 81.25rem;
   width: 100%;
-  height: 100vh;
+  height: 95vh;
 }
 
 .title {
@@ -29,4 +30,39 @@ main, footer {
 
 .titleTwo {
   color: var(--yellow-color);
+}
+
+.subContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.membersContainer {
+  max-width: 56.25rem;
+  width: 100%;
+  height: 80vh;
+  padding: 1rem;
+  border: 1px solid var(--gray-color);
+  border-radius: 10px;
+}
+
+.membersInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.membersInputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.memberDisplay {
+  max-width: 23rem;
+  width: 100%;
+  border: 1px solid var(--gray-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
