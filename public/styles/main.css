@@ -49,7 +49,7 @@ main, footer {
   border-radius: 0.3rem;
 }
 
-.membersInfo {
+.membersTopPart {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,7 +65,6 @@ main, footer {
   display: flex;
   align-items: center;
   background-color: var(--white-color);
-  /* padding: 0.5rem; */
   border-radius: 0.3rem;
 }
 
@@ -95,9 +94,90 @@ input:focus {
 .memberDisplay {
   max-width: 23rem;
   width: 100%;
+  background-color: var(--light-gray-color);
   border: 1px solid var(--dark-gray-color);
   border-radius: 0.3rem;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  font-family: var(--main-font);
+}
+
+.editContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.nameInitial {
+  margin: 0;
+  background-color: var(--yellow-color);
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  font-size: 3rem;
+}
+
+.editButton {
+  position: absolute;
+  bottom: 0;
+  right: -2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.fa-pencil {
+  font-size: 1rem;
+}
+
+.memberName {
+  font-size: 1.8rem;
+  font-weight: 100;
+  margin: 0.8rem 0 0;
+}
+
+.memberId {
+  margin: 0;
+  color: var(--dark-gray-color);
+  font-weight: 200;
+}
+
+.horizontalLine {
+  width: 85%;
+}
+
+.memberInfo {
+  display: flex;
+  gap: 2rem;
+}
+
+.memberInfo > p {
+  margin: 0.5rem 0 0;
+}
+
+.memberInfo >p:nth-child(2) {
+  font-weight: 200;
+}
+
+.doneButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 5rem;
+  background-color: var(--mint-color);
+}
+
+.deleteButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 4.8rem;
+  background-color: var(--light-yellow-color);
 }
