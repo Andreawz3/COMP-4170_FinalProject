@@ -1,3 +1,22 @@
+:root {
+  --yellow-color: #FF9F1C;
+  --light-yellow-color: #FFBF69;
+  --white-color: #fff;
+  --mint-color: #CBF3F0;
+  --dark-mint-color: #2EC4B6;
+
+  --main-font: "Kanit", sans-serif;
+}
+
+main, footer {
+  font-family: var(--main-font);
+}
+
 .title {
-  color: #2EC4B6;
+  font-weight: 500;
+  color: var(--dark-mint-color);
+}
+
+.titleTwo {
+  color: var(--yellow-color);
 }
