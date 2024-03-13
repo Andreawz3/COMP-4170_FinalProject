@@ -98,6 +98,40 @@ input:focus {
   padding: 0.5rem;
 }
 
+.list-header {
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 5rem 13rem 13rem 10rem 5rem;
+}
+
+.list-header > p {
+  color: var(--dark-gray-color);
+  margin: 1rem 0 0 0;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+.member-listDisplay {
+  padding: 0.7rem 3rem;
+  display: grid;
+  grid-template-columns: 5rem 13rem 13rem 10rem 5rem;
+  border-bottom: 1px solid var(--dark-gray-color);
+}
+
+.member-listDisplay > p {
+  margin: 0;
+}
+
+.viewBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.viewBtn:hover {
+  color: var(--yellow-color);
+}
+
 .memberDisplay {
   max-width: 23rem;
   width: 100%;
