@@ -1,5 +1,6 @@
 const express = require('express');
-import pg from "pg";
+const pg = require('pg');
+
 const path = require('path');
 
 const app = express();
@@ -10,7 +11,7 @@ const db = new pg.Client({
   host: "localhost",
   database: "",
   password: "",
-  posrt: 5432,
+  port: 5432,
 });
 db.connect();
 

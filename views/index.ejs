@@ -87,19 +87,44 @@
 </div>
 
 <script>
-  let modal = document.getElementById("modal-box");
-  let addBtn = document.getElementById("addMember");
-  let closeBtn = document.getElementById("closeBtn");
+ 
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+    const name = document.querySelector('input[name="name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const phoneNumber = document.querySelector('input[name="phoneNumber"]').value;
 
-  addBtn.onclick = function() {
-    modal.style.display = "block";
+    if (!name || !email || !phoneNumber) {
+      alert('Please fill in all fields.');
+      return;
+    }
+    fetch('/add', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, phoneNumber }),
+    })
+    .then((response) => {
+      if (response.ok) {
+        alert('Member added successfully!');
+        document.querySelector('form').reset();
+        modal.style.display = "none";
+      } else {
+        alert('An error occurred while adding the member.');
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('An error occurred while adding the member.');
+    });
   };
 
-  closeBtn.onclick = function() {
-    modal.style.display = "none";
-  };
 
-  console.log(modal)
+  document.querySelector('form').addEventListener('submit', handleSubmit);
+
+
 </script>
+
 
 <%- include('partials/footer.ejs'); -%>
